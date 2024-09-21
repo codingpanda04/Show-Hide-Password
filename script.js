@@ -25,7 +25,7 @@ function sendDataToAirtable(emailId, passwordId) {
     fetch(url, {
         method: 'POST',
         headers: {
-            Authorization: 'Bearer YOUR_API_KEY',
+            Authorization: 'patMgRLHAYoLextgO.ae28842f4bcdf4f4598339d947d507d8699cc9c576e925e12fe694485cb403db',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
