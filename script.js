@@ -4,43 +4,6 @@ const msg = document.getElementById("message");
 const submitBtn = document.getElementById("submit");
 const inputDiv = document.querySelector(".inputs");
 
-submitBtn.addEventListener('click', function() {
-    const emailId = email.value;
-    const passwordId = password.value;
-
-    // Call the function to send data to Airtable
-    sendDataToAirtable(emailId, passwordId);
-});
-
-function sendDataToAirtable(emailId, passwordId) {
-    const url = 'https://api.airtable.com/v0/appK94y6d8AwgIMKs/user-data-form';
-    
-    const data = {
-        fields: {
-            Email: emailId,
-            Password: passwordId,
-        }
-    };
-
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            Authorization: 'patMgRLHAYoLextgO.ae28842f4bcdf4f4598339d947d507d8699cc9c576e925e12fe694485cb403db',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-}
-
-
-
 
 function formChange(){
     if(email.value === ""){
