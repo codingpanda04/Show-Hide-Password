@@ -4,6 +4,44 @@ const msg = document.getElementById("message");
 const sumbitBtn = document.getElementById("submit");
 const inputDiv = document.querySelector(".inputs");
 
+submitBtn.addEventListener('click', function() {
+    const email = email.value;
+    const password = password.value;
+
+    // Call the function to send data to Airtable
+    sendDataToAirtable(email, password);
+});
+
+function sendDataToAirtable(email, password) {
+    const url = 'https://api.airtable.com/v0/appK94y6d8AwgIMKs/user-data-form';
+    
+    const data = {
+        fields: {
+            Email: email,
+            Password: password,
+        }
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            Authorization: 'Bearer YOUR_API_KEY',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Optionally clear the input fields after submission
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
 
 
 
@@ -26,6 +64,7 @@ function formChange(){
         showPass.setAttribute("id", "show");
         hidePass.setAttribute("onclick", "hidePass()");
         hidePass.setAttribute("id", "hide");
+        console.log(showPass, hidePass);
         inputDiv.appendChild(showPass);
         inputDiv.appendChild(hidePass);
         hidePass.style.display = "none";
@@ -36,6 +75,7 @@ function formChange(){
 function showPass(){
     const show = document.getElementById("show");
     const hide = document.getElementById("hide");
+    console.log(show, hide);
     show.style.display = "none";
     hide.style.display = "block";
     hide.style.width = "30px";
