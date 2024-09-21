@@ -6,7 +6,7 @@
 body{
     background: rgb(217, 174, 89);
 }
-.inputs{
+.inputs form{
     width: 400px;
     position: absolute;
     display: flex;
