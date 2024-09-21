@@ -33,9 +33,6 @@ function sendDataToAirtable(emailId, passwordId) {
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        // Optionally clear the input fields after submission
-        document.getElementById('email').value = '';
-        document.getElementById('password').value = '';
     })
     .catch((error) => {
         console.error('Error:', error);
