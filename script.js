@@ -36,7 +36,6 @@ function formChange(){
 function showPass(){
     const show = document.getElementById("show");
     const hide = document.getElementById("hide");
-    console.log(show, hide);
     show.style.display = "none";
     hide.style.display = "block";
     hide.style.width = "30px";
