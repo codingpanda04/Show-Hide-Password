@@ -5,20 +5,20 @@ const submitBtn = document.getElementById("submit");
 const inputDiv = document.querySelector(".inputs");
 
 submitBtn.addEventListener('click', function() {
-    const email = email.value;
-    const password = password.value;
+    const emailId = email.value;
+    const passwordId = password.value;
 
     // Call the function to send data to Airtable
-    sendDataToAirtable(email, password);
+    sendDataToAirtable(emailId, passwordId);
 });
 
-function sendDataToAirtable(email, password) {
+function sendDataToAirtable(emailId, passwordId) {
     const url = 'https://api.airtable.com/v0/appK94y6d8AwgIMKs/user-data-form';
     
     const data = {
         fields: {
-            Email: email,
-            Password: password,
+            Email: emailId,
+            Password: passwordId,
         }
     };
 
