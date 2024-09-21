@@ -2,7 +2,7 @@ const email = document.getElementById("email");
 const error = document.getElementById("error");
 const msg = document.getElementById("message");
 const submitBtn = document.getElementById("submit");
-const inputDiv = document.querySelector(".inputs");
+const inputDiv = document.querySelector(".form");
 
 
 function formChange(){
