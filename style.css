@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(217, 174, 89);
+}
+.inputs{
+    width: 400px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: floralwhite;
+    padding: 10px 30px;
+    border-radius: 10px;
+    top: 30%;
+    left: 33%;
+}
+.inputs input{
+    border: none;
+    outline: 1px solid blue;
+    padding: 10px 10px;
+    color: blue;
+    font-weight: 300;
+    text-align: center;
+}
+::placeholder{
+    text-align: center;
+}
+.inputs button{
+    border: none;
+    background: blue;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: white;
+}
+#error{
+    text-align: center;
+    color: red;
+    margin-top: -10px;
+}
+.inputs img{
+    width: 50px;
+    position: absolute;
+    margin: 45px 270px;
+    cursor: pointer;
+    border-radius: 50%;
+}
