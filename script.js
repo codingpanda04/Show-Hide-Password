@@ -1,7 +1,7 @@
 const email = document.getElementById("email");
 const error = document.getElementById("error");
 const msg = document.getElementById("message");
-const sumbitBtn = document.getElementById("submit");
+const submitBtn = document.getElementById("submit");
 const inputDiv = document.querySelector(".inputs");
 
 submitBtn.addEventListener('click', function() {
