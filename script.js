@@ -54,7 +54,7 @@ function formChange(){
         email.setAttribute("type", "password");
         email.setAttribute("placeholder", "password");
         email.setAttribute("id", "password");
-        sumbitBtn.setAttribute("onclick", "submitForm()");
+        submitBtn.setAttribute("onclick", "submitForm()");
         password.value = "";
         let showPass = document.createElement("img");
         let hidePass =  document.createElement("img");
