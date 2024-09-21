@@ -26,7 +26,6 @@ function formChange(){
         showPass.setAttribute("id", "show");
         hidePass.setAttribute("onclick", "hidePass()");
         hidePass.setAttribute("id", "hide");
-        console.log(showPass, hidePass);
         inputDiv.appendChild(showPass);
         inputDiv.appendChild(hidePass);
         hidePass.style.display = "none";
